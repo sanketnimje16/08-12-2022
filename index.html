@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JS Array</title>
+        <link rel="stylesheet" href="./css/style.css">
+        <style>
+            /*
+            selector{
+                property:value
+            }
+            */
+            H1[data-myheading]{
+                color:red;
+                padding: 50px;
+                background-color: black;
+                border-radius: 30px;
+
+            }
+        </style>
+        <script src="./js/script.js"></script>
+        <script>
+            
+        </script>
+    </head>
+    <body>
+        <!-- 
+        <tag attribute="value"></closing tag>
+         -->
+        <h1 data-myheading="myheading"></h1>
+        <p id="news1p"></p>
+        <h1 class="sanket"></h1>
+        <p class="nimje"></p>
+        <hr/>
+        <script>
+            let students = ["Sanket", "Rahul", "nandini" ]; //JavaScript Array 
+
+            //Display the output
+            //arrayName[indexnumber]
+            console.log("hello "+students[2]); //concatination operator
+
+            //2. method 2nd
+           // alert('hello "'+students[1]+'"'); //concatination operator
+
+            //3. method 3rd
+            // code reduce 
+            //let h1 = document.querySelector('h1[data-myheading="myheading"]');
+            let h1 = document.querySelector('[data-myheading]');
+            // i want to follow DRY (don't repeat yourself) Principle
+            h1.innerHTML = 'Hello '+ students[0];
+            
+            //While Ishan Kishan has admired MS Dhoni all throughout, his idol before MSD was someone whose batting style is very similar to him.
+
+            const $allNews = [{
+                n1h1:"'He used to smash everyone, be it Brett Lee or Shoaib Akhtar': Ishan Kishan reveals his idol before MS Dhoni",
+                n1p1:"While Ishan Kishan has admired MS Dhoni all throughout, his idol before MSD was someone whose batting style is very similar to him."
+            },{},{}            ] // time laps 40.3
+            
+            document.querySelector('h1.sanket').innerHTML = $allNews[0].n1h1;
+            document.querySelector('p.nimje').innerHTML = $allNews[0]["n1p1"];
+        </script>
+    </body>
+</html>
